@@ -1,13 +1,67 @@
-.how-it-works {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    text-align: center;
-    font-size: 20px;
+.how-it-works-section {
+  padding-bottom: 80px;
+  background-color: #F9F9F9;
+  text-align: center;
 }
 
-.paragraph-how-it-works {
+.how-it-works-section h2 {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    text-align: center;
-    margin-bottom: 60px;
-    font-size: 13px;
-    color: #7E7E7E;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 8px;
 }
+
+.how-it-works-section p {
+    font-size: 17px;
+    color: #7E7E7E;
+    margin-top: 4px;
+    margin-bottom: 40px;
+}
+
+.hiw-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto 120px;
+  padding: 0 20px;
+  gap: 80px;
+}
+
+.hiw-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.hiw-image img {
+  width: 420px;
+  max-width: 100%;
+}
+
+.hiw-text {
+  max-width: 420px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.hiw-text h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.hiw-text p {
+  font-size: 14px;
+  color: #7E7E7E;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .hiw-row,
+  .hiw-row.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hiw-row {
+    margin-bottom: 80px;
+  }
+}
+
