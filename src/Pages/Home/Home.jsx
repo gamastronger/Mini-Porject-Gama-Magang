@@ -1,37 +1,17 @@
-import "./home.css";
-import HeroImage from "../../assets/images/gamaHome.svg";
+import "./Home.css";
+
+import Hero from "./Sections/Hero/Hero.jsx";
+import HowItWorks from "./Sections/HowItWorks/HowItWorks";
+import Cta from "./Sections/Cta/Cta.jsx";
+// import CTA from "./sections/CTA/CTA";
+
 function Home() {
   return (
-    <section className="home">
-      <div className="home-content">
-
-        <div className="home-text">
-          <h1 className="home-title">
-            Make Your <br />
-            Imagination <br />
-            Come True
-          </h1>
-
-          <button className="buton">Get Started</button>
-
-          <div className="stats">
-            <div className="stat-item">
-              <h1>1K+</h1>
-              <p>Collections</p>
-            </div>
-
-            <div className="stat-item">
-              <h1>4K+</h1>
-              <p>items trusted to deliver</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="home-image">
-          <img src={HeroImage} alt="Hero" />
-        </div>
-      </div>
-    </section>
+    <main className="home">
+      <Hero />
+      <HowItWorks />
+      <Cta />
+    </main>
   );
 }
 
