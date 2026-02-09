@@ -1,0 +1,11 @@
+.printing {
+    text-align: center;
+    padding: 50px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #F5F5F5;
+}
+
+.printing p {
+    font-size: 18px;
+    color: #7E7E7E;
+}

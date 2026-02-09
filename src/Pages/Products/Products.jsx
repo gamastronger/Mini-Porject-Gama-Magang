@@ -1,12 +1,12 @@
-import Navbar from "../../components/Navbar/Navbar"
-import Footer from "../../components/Footer/Footer"
+import Printing from "./Printing/Printing"
+import Store from "./Tshirt/Tshirt"
+
 
 function Products() {
   return (
     <main className="products-page">
-      <Navbar />
-      <h1>Products Page</h1>
-      <Footer />
+      <Printing />
+      <Store />
     </main>
   )
 }

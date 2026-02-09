@@ -1,7 +1,10 @@
+import "./Testimonials.css";
+
 export default function Testimonials() {
   return (
-    <div>
-      <h1>Testimonials Page</h1>
-    </div>
+    <main className="testimonials-page">
+        <h1>What People Are Saying</h1>
+        <p>We provide support for more than 5K+ Businesses.</p>
+    </main>
   );
 }
