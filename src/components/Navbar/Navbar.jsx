@@ -19,9 +19,9 @@ const Navbar = () => {
 
         <nav className="nav-center">
           <ul className="nav-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#tshirt">T-Shirt</a></li>
-            <li><a href="#testimonies">Testimonies</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">T-Shirt</a></li>
+            <li><a href="/testimonials">Testimonies</a></li>
           </ul>
         </nav>
 
