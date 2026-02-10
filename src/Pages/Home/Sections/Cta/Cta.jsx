@@ -1,7 +1,7 @@
 import "./Cta.css";
 import CtaImage from "../../../../assets/images/imageCta.png";
 
-export default function FeaturedProducts() {
+export default function FeaturedProducts({ title, description, buttonText }) {
     return(
         <>
         <section className="cta-section">
@@ -10,11 +10,9 @@ export default function FeaturedProducts() {
             </div>
 
             <div className="cta-content">
-                <h2>Free and easy way to bring your ideas to life</h2>
-                <p>
-                Fast, easy and free: Bring your creative ideas to life with easy-to-use and efficient tools without any previous design experience.
-                </p>
-                <button className="cta-button">Get Started</button>
+                <h2>{title}</h2>
+                <p>{description}</p>
+                <button className="cta-button">{buttonText}</button>
             </div>
         </section>
 

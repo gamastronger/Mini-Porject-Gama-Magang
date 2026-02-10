@@ -3,54 +3,51 @@ import user1 from "../../../Assets/Images/user1.png";
 import user2 from "../../../Assets/Images/user2.png";
 import user3 from "../../../Assets/Images/user3.png";
 
-export default function Testimonials() {
+export default function Testimoni({title, description, testimonials}) {
   return (
     <section className="testimonials-section">
       <div className="testimonials-header">
-        <h2>What People Are Saying</h2>
-        <p>We provide support for more than 5K+ Businesses.</p>
+        <h2>{title}</h2>
+        <p>{description}</p>
       </div>
 
       <div className="testimonials-grid">
         <div className="testimonial-card">
           <div className="testimonial-user">
-            <img src={user1} alt="Gumi" />
+            <img src={user1} alt={testimonials[0].name} />
             <div>
-              <strong>Gumi</strong>
-              <span>Owner</span>
+              <strong>{testimonials[0].name}</strong>
+              <span>{testimonials[0].role}</span>
             </div>
           </div>
           <p>
-            “InnoTees really brought my imagination to life! The t-shirt designs
-            are amazing and high quality.”
+            {testimonials[0].message}
           </p>
         </div>
 
         <div className="testimonial-card">
           <div className="testimonial-user">
-            <img src={user2} alt="Plufy" />
+            <img src={user2} alt={testimonials[1].name} />
             <div>
-              <strong>Plufy</strong>
-              <span>Director</span>
+              <strong>{testimonials[1].name}</strong>
+              <span>{testimonials[1].role}</span>
             </div>
           </div>
           <p>
-            “With InnoTees, I can create unique and personalized t-shirt designs.
-            Their customer service is also very helpful.”
+            {testimonials[1].message}
           </p>
         </div>
 
         <div className="testimonial-card">
           <div className="testimonial-user">
-            <img src={user3} alt="Itis" />
+            <img src={user3} alt={testimonials[2].name} />
             <div>
-              <strong>Itis</strong>
-              <span>Designer</span>
+              <strong>{testimonials[2].name}</strong>
+              <span>{testimonials[2].role}</span>
             </div>
           </div>
           <p>
-            “InnoTees allows me to express my creativity in an interesting way.
-            The t-shirts I make are always a favorite.”
+            {testimonials[2].message}
           </p>
         </div>
       </div>

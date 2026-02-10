@@ -15,7 +15,12 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/testimonials" element={<Testimonials />} />
       </Routes>
-      <Footer />
+      <Footer
+      email="refasetyagama@gmail.com"
+      address="Ketintang, Gayungan, Surabaya"
+      aboutText="InnoTees is a t-shirt design and printing platform that helps you realize your creative imagination. With InnoTees, every idea you have can be a unique and attractive t-shirt design."
+      newestText="Stay Connected. Receive the latest news, events, and updates directly to your inbox."
+      />
     </BrowserRouter>
   )
 }

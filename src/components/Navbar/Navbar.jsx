@@ -1,4 +1,3 @@
-import React from "react";
 import "./Navbar.css";
 import Logo from "../../assets/images/logoinnotes.png";
 

@@ -1,40 +1,36 @@
 import "./Hero.css";
-import HeroImage from "../../../../assets/images/gamaHome.svg";
-import Partner from "../Partner/Partner.jsx";
-function Home() {
-  return (
-    <section className="home">
-      <div className="home-content">
 
+function Hero({ titleLines, buttonText, stats, image }) {
+  return (
+    <section className="hero">
+      <div className="home-content">
         <div className="home-text">
           <h1 className="home-title">
-            Make Your <br />
-            Imagination <br />
-            Come True
+            {titleLines.map((line, index) => (
+              <span key={index}>
+                {line} <br />
+              </span>
+            ))}
           </h1>
 
-          <button className="buton">Get Started</button>
+          <button className="button">{buttonText}</button>
 
           <div className="stats">
-            <div className="stat-item">
-              <h1>1K+</h1>
-              <p>Collections</p>
-            </div>
-
-            <div className="stat-item">
-              <h1>4K+</h1>
-              <p>items trusted to deliver</p>
-            </div>
+            {stats.map((item, index) => (
+              <div className="stat-item" key={index}>
+                <h1>{item.value}</h1>
+                <p>{item.label}</p>
+              </div>
+            ))}
           </div>
         </div>
 
         <div className="home-image">
-          <img src={HeroImage} alt="Hero" />
+          <img src={image} alt="Hero" />
         </div>
       </div>
-      <Partner />
     </section>
   );
 }
 
-export default Home;
+export default Hero;

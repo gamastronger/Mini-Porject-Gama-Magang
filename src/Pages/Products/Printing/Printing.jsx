@@ -1,11 +1,10 @@
-import React from "react";
 import "./Printing.css";
 
-function Printing() {
+function Printing({ title, description }) {
     return (
         <div className="printing">
-            <h1>T-shirt printing made easy.</h1>
-            <p>Bring your creative ideas to life with ease. Design, personalize, and print custom t-shirts in minutes!</p>
+            <h1>{title}</h1>
+            <p>{description}</p>
         </div>
     )
 }
