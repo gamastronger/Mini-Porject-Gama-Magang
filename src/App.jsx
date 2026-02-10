@@ -5,6 +5,7 @@ import Products from './Pages/Products/Products.jsx'
 import Testimonials from './Pages/Testimonials/Testimonials.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
 import Footer from './components/Footer/Footer.jsx'
+import Posts from './Pages/Posts/Posts.jsx'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/posts" element={<Posts />} />
       </Routes>
       <Footer
       email="refasetyagama@gmail.com"
