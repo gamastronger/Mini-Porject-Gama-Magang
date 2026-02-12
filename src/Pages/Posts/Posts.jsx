@@ -1,29 +1,37 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from "react";
+import './Posts.css'
+import FormPosts from "./formPost.jsx";
 
 function Posts() {
-    const [post, setPost] = useState([])
+  const [posts, setPosts] = useState([]);
 
-    useEffect(() => {
-        setPost([
-            { id: 1, title: "pertama" },
-            { id: 2, title: "kedua" },
-        ])
-    }, [])
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then(res => res.json())
+      .then(data => {
+        setPosts(data);
         
-    return (
-        <div style={{padding: "2rem"}}>
-            <h1>Post Page</h1>
+      });
+  }, []);
 
-            <ul>
-                {post.map(post => (
-                    <li key={post.id}>
-                        <strong>{post.title}</strong>
-                    </li>
-                ))}
-            </ul>
+  const handleAddPost = (newPost) => {
+  setPosts((prevPosts) => [newPost, ...prevPosts]);
+  };
 
-        </div>
-    )
+  return (
+    <div className="posts">
+      <h1>Posts</h1>
+      <FormPosts onAddPost={handleAddPost} />
+      <ul>
+        {posts.slice(0, 10).map(post => (
+          <li key={post.id}>
+            <h2>{post.title}</h2>       
+            <p>{post.body}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
 }
 
 export default Posts;

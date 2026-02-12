@@ -1,0 +1,20 @@
+.posts {
+    padding: 50px;
+    font-family: 'Plus Jakarta Sans';
+}
+
+.posts h2 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.posts h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0%;
+}
+
+.posts p {
+    font-size: 14px;
+    color: #555;
+}
