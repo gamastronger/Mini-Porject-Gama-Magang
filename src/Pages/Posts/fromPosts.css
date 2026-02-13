@@ -12,6 +12,12 @@
     text-align: center;
 }
 
+.form textarea::placeholder,
+.form input::placeholder {
+    color: #9b9b9b;
+    opacity: 1;
+}
+
 .form input,
 .form textarea,
 .form button {
@@ -22,7 +28,9 @@
 .form input {
     padding: 8px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #1e1e1e;
+    background-color: #ffffff;
+    color: #1e1e1e;
     border-radius: 4px;
     font-size: 14px;
 }
@@ -31,17 +39,19 @@
     height: 100px;
     padding: 8px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #1e1e1e;
+    background-color: #ffffff;
     border-radius: 4px;
     font-size: 14px;
     resize: vertical;
+    color: #1e1e1e;
 }
 
 .form button {
     padding: 10px;
     background-color: #ffffff;
     color: #313131;
-    border: 2px solid #363636;
+    border: 1px solid #363636;
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
