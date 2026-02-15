@@ -11,7 +11,7 @@ import LogoPartner4 from "../../assets/images/s.png";
 
 function Home() {
   return (
-    <main className="home">
+    <main>
       <Hero
         titleLines={["Make Your", "Imagination", "Come True"]}
         buttonText="Get Started"

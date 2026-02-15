@@ -1,6 +1,7 @@
 import "./Hero.css";
+import { Link } from "react-router-dom";
 
-function Hero({ titleLines, buttonText, stats, image }) {
+function Hero({ titleLines = [], buttonText = "", stats = [], image = "" }) {
   return (
     <section className="hero">
       <div className="home-content">
@@ -13,7 +14,7 @@ function Hero({ titleLines, buttonText, stats, image }) {
             ))}
           </h1>
 
-          <button className="button">{buttonText}</button>
+          <Link to="/products" className="button">{buttonText}</Link>
 
           <div className="stats">
             {stats.map((item, index) => (

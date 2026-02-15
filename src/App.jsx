@@ -6,12 +6,14 @@ import Testimonials from './Pages/Testimonials/Testimonials.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import Posts from './Pages/Posts/Posts.jsx'
+import SignIn from "./Pages/SignIn/SignIn.jsx";
 
 function App() {
   return (
     <BrowserRouter>
     <Navbar />
       <Routes>
+          <Route path="/signin" element={<SignIn />} />
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/testimonials" element={<Testimonials />} />

@@ -1,34 +1,44 @@
 import "./Navbar.css";
 import Logo from "../../assets/images/logoinnotes.png";
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../store/authSlice.js";
 
 const Navbar = () => {
+  const { isLoggedIn, user } = useSelector(state => state.auth);
+  const dispatch = useDispatch();
+
   return (
     <header className="navbar">
       <div className="navbar-container">
 
-        <div className="nav-left">
-          <a href="#home" className="nav-logo">
-            <img
-              src={Logo}
-              alt="InnoTees logo"
-              className="nav-logo-img"
-            />
-          </a>
-        </div>
+        <Link to="/" className="nav-logo">
+          <img
+            src={Logo}
+            alt="InnoTees logo"
+            className="nav-logo-img"
+          />
+        </Link>
 
-        <nav className="nav-center">
-          <ul className="nav-menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="/products">T-Shirt</a></li>
-            <li><a href="/testimonials">Testimonies</a></li>
-            <li><a href="/posts">Posts</a></li>
-          </ul>
+        <nav className="nav-menu">
+          <Link to="/">Home</Link>
+          <Link to="/products">T-Shirt</Link>
+          <Link to="/testimonials">Testimonies</Link>
+          <Link to="/posts">Posts</Link>
         </nav>
 
-        <div className="nav-right">
-          <button className="btn-outline">Sign In</button>
-          <button className="btn-primary">Sign Up</button>
-        </div>
+        {isLoggedIn ? (
+          <div className="nav-user">
+            <span>Halo {user?.name}</span>
+            <button onClick={() => dispatch(logout())}>
+              Logout
+            </button>
+          </div>
+        ) : (
+          <Link to="/signin" className="btn-signin">
+            Sign In
+          </Link>
+        )}
 
       </div>
     </header>
